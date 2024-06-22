@@ -16,3 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// routes/web.php
+
+use App\Http\Controllers\PaymentController;
+
+Route::post('/payment/create', [PaymentController::class, 'create']);
+Route::post('/payment/webhook', [PaymentController::class, 'handleWebhook']);
+
+Route::get('/success', function () {
+    return view('success'); // Pastikan file 'success.blade.php' ada di folder 'resources/views'
+});
+
+Route::get('/failure', function () {
+    return view('failure'); // Pastikan file 'failure.blade.php' ada di folder 'resources/views'
+});
+

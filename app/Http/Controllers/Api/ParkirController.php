@@ -80,4 +80,6 @@ class ParkirController extends Controller
             return response()->json(['message' => 'Failed to save parkir data'], 500);
         }
     }
+
+    
 }

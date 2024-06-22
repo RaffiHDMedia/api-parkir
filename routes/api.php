@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\ParkirController;
+use App\Http\Controllers\paymentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,5 +23,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::get('parkir-ticket',[ParkirController::class, 'index']);
 Route::post('parkir-add',[ParkirController::class, 'store']);
+
+Route::post('payment/ewallet',[PaymentController::class, 'create']);
+Route::post('payment/cash',[PaymentController::class, 'paymentCash']);
+
+
 
 
