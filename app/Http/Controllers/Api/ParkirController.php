@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Events\OpenGateEvent;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Parkir;
@@ -69,6 +70,8 @@ class ParkirController extends Controller
         ]);
 
         Log::info('Notrans stored:', ['notrans' => $parkir->notrans]);
+        
+        OpenGateEvent::dispatch();
 
         if ($parkir->notrans) {
             return response()->json([
