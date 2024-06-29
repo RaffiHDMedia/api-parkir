@@ -27,6 +27,7 @@ Route::post('parkir-add',[ParkirController::class, 'store']);
 Route::post('payment/ewallet',[PaymentController::class, 'create']);
 Route::post('payment/cash',[PaymentController::class, 'paymentCash']);
 
+Route::get('opengate',[ParkirController::class, 'opengate']);
 
 
 

@@ -84,5 +84,9 @@ class ParkirController extends Controller
         }
     }
 
+    public function opengate(){
+        OpenGateEvent::dispatch();
+        Log::info('Open Gate Request:');
+    }
     
 }
