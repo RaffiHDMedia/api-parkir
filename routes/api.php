@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\ParkirController;
-use App\Http\Controllers\paymentController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +25,10 @@ Route::get('parkir-ticket',[ParkirController::class, 'index']);
 Route::post('parkir-add',[ParkirController::class, 'store']);
 
 Route::post('payment/ewallet',[PaymentController::class, 'create']);
+Route::get('payment/ewallet/{notransaksi}',[PaymentController::class, 'refresh']);
+
+Route::post("/payment/webhook",[PaymentController::class, 'webHook']);
+
 Route::post('payment/cash',[PaymentController::class, 'paymentCash']);
 
 Route::get('opengate',[ParkirController::class, 'opengate']);

@@ -8,14 +8,14 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3",
+        "php": "^7.4",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "php-mqtt/client": "^0.3.0",
-        "xendit/xendit-php": "^2.19"
+        "xendit/xendit-php": "^5.0.0"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
