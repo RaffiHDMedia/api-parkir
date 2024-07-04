@@ -48,7 +48,7 @@ class ParkirController extends Controller
         $notrans = str_pad(random_int(0, 999999999), 11, '0', STR_PAD_LEFT);
         $tanggal = Carbon::now()->toDateString();
         $masuk = Carbon::now();
-        $pertama = $request->type == 'S' ? 2000 : 5000;
+        $pertama = $request->type == 'S' ? 3000 : 5000;
         $total = $pertama;
 
         // Simpan data parkir baru
